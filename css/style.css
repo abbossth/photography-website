@@ -15,3 +15,105 @@
     text-decoration: none;
     transition: all 0.2s linear;
 }
+::selection{
+    background-color: var(--white);
+    color: var(--colorBlack);
+}
+html{
+    font-size: 63%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:1.2rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--white);
+    border-radius: 5px;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--colorGrey);
+    border-radius: 5px;
+}
+body{
+    background: var(--colorGrey);
+}
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+.heading{
+    color:#444;
+    padding:1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1.5rem 7%;
+    background: none;
+    border-bottom: 1.5px solid var(--white);
+    /* box-shadow: 0 .1rem .3rem rgba(0,0,0,.3); */
+}
+
+header .logo{
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 2.5rem;
+}
+header .logo span:first-child{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+header .logo span:last-child{
+    font-size: 2rem;
+}
+header .phone-number{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+header .navbar #menu {
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+header .navbar ul{
+    position: absolute;
+    top: 7rem;
+    left: -14rem;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    background: rgba(0,0,0,0.3);
+    border-radius: 7px;
+    /* border-left: 2px solid var(--colorGrey); */
+    box-shadow: -3px 3px 7px #fff;
+}
+
+header .navbar ul li{
+    margin: 2.5rem 2.5rem 2.5rem 1rem;
+}
+
+header .navbar ul li a{
+    font-size: 2rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:#444;
+}
