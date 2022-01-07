@@ -1,8 +1,12 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
 /* Root values */
 :root{
     --white: #ffffff;
     --colorBlack: #121212;
     --colorGrey: #2a2a2a;
+    --colorBlue: rgb(0, 140, 255);
     --fontFamily: "Playfair Display";
 }
 
@@ -16,16 +20,16 @@
     transition: all 0.2s linear;
 }
 ::selection{
-    background-color: var(--white);
-    color: var(--colorBlack);
+    background-color: var(--colorBlue);
+    color: var(--white);
 }
 html{
-    font-size: 63%;
+    font-size: 70%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 html::-webkit-scrollbar{
-    width:1.2rem;
+    width: 1rem;
 }
 
 html::-webkit-scrollbar-track{
@@ -38,7 +42,7 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5px;
 }
 body{
-    background: var(--colorGrey);
+    background: var(--colorBlack);
 }
 section{
     min-height: 100vh;
@@ -57,20 +61,19 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top:0; left: 0;
     z-index: 1000;
     padding:1.5rem 7%;
     background: none;
     border-bottom: 1.5px solid var(--white);
-    /* box-shadow: 0 .1rem .3rem rgba(0,0,0,.3); */
 }
 
 header .logo{
     color:#fff;
     text-decoration: none;
     text-align: center;
-    margin-right: 2.5rem;
+    margin-right: 3rem;
 }
 header .logo span:first-child{
     font-size: 2.5rem;
@@ -93,14 +96,16 @@ header .navbar ul{
     position: absolute;
     top: 7rem;
     left: -14rem;
-    display: block;
+    display: none;
     align-items: center;
     justify-content: center;
     list-style: none;
     background: rgba(0,0,0,0.3);
     border-radius: 7px;
-    /* border-left: 2px solid var(--colorGrey); */
     box-shadow: -3px 3px 7px #fff;
+}
+header .navbar ul.active{
+    display: block;
 }
 
 header .navbar ul li{
@@ -116,4 +121,107 @@ header .navbar ul li a{
 header .navbar ul li a.active,
 header .navbar ul li a:hover{
     color:#444;
+}
+
+.home{
+    background-image: url("../images/bg-1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+.home .content{
+    height: 100%;
+    position: absolute;
+    top: 25%;
+    left: 7%;
+}
+.home .content .line-1 {
+    font-size: 2rem;
+    color: #ccc;
+    font-family: 'Lato', sans-serif;
+}
+.home .content .line-2{
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+}
+.home .content .line-3{
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0;
+    color: #bebbbb;
+}
+.home .content a{
+    margin-top: 2rem;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    border-radius: 15px;
+    box-shadow: 6px 6px 12px rgba(255, 255, 255,0.3);
+    background-color: var(--white);
+}
+.home .content a:hover{
+    box-shadow: 8px 8px 12px rgba(255, 255, 255,0.3);
+}
+.home .content-box{
+    position: absolute;
+    width: 380px;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid var(--white);
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0.2);
+}
+.home .box-1{
+    top: 100%;
+    padding: 1.5rem 7rem 1.5rem 1.5rem;
+}
+.home .box-2{
+    top: 135%;
+    padding: 1.5rem 1.5rem 1.5rem 7rem;
+}
+.home .box-3{
+    top: 170%;
+    padding: 1.5rem 7rem 1.5rem 1.5rem;
+}
+/* Media queries */
+@media (min-width: 768%) and (max-width: 1200px) {
+    html{
+        font-size: 68%;
+    }
+    .content .line-2{
+        font-size: 7rem;
+    }
+    .home .box-2{
+        text-align: right;
+        right: 10%;
+    }
+}
+@media (min-width: 441px) and (max-width: 768px) {
+    html{
+        font-size: 56%;
+    }
+    .content .line-2{
+        font-size: 6.5rem;
+    }
+    .home .box-2{
+        text-align: right;
+        right: 10%;
+    }
+}
+@media (max-width: 441px) {
+    html{
+        font-size: 42%;
+    }
+    .content .line-2{
+        font-size: 4rem;
+    }
+    .home .box-2{
+        text-align: left;
+        padding: 1.5rem 4rem 1.5rem 1.5rem;
+    }
 }
