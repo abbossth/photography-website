@@ -46,8 +46,8 @@ body{
 }
 section{
     min-height: 100vh;
-    padding:1rem 7%;
-    padding-top:6rem;
+    padding: 1rem 7%;
+    padding-top: 6rem;
 }
 .heading{
     color:#444;
@@ -128,7 +128,7 @@ header .navbar ul li a:hover{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 220vh;
+    height: 230vh;
     width: 100%;
     display: flex;
     justify-content: left;
@@ -137,7 +137,7 @@ header .navbar ul li a:hover{
 .home .content{
     height: 100%;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 7%;
 }
 .home .content .line-1 {
@@ -165,63 +165,341 @@ header .navbar ul li a:hover{
 .home .content a:hover{
     box-shadow: 8px 8px 12px rgba(255, 255, 255,0.3);
 }
-.home .content-box{
+.home .box-container{
     position: absolute;
-    width: 380px;
+    top: 100%;
+    width: 100%;
+}
+.home .content-box{
+    width: 400px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: 2px;
     font-family: 'Lato', sans-serif;
     border: 1px solid var(--white);
     text-transform: uppercase;
     background-color: rgba(0,0,0,0.2);
+    position: absolute;
 }
+.home .content-box > span{
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    /* background-color: #13151a; */
+}
+.home .content-box > span div{
+    position: absolute;
+    z-index: 5;
+    top: 6.5px;
+    left: 6.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-color: #13151a;;
+}
+
 .home .box-1{
-    top: 100%;
     padding: 1.5rem 7rem 1.5rem 1.5rem;
+    top: 0;
 }
 .home .box-2{
-    top: 135%;
     padding: 1.5rem 1.5rem 1.5rem 7rem;
+    margin: 4rem 0;
+    top: 30vh;
 }
 .home .box-3{
-    top: 170%;
     padding: 1.5rem 7rem 1.5rem 1.5rem;
+    top: 70vh;
 }
+
+
+.home .box-1 span,.home .box-3 span{
+    top: -15px;
+    right: -15px;
+}
+.home .box-2 span{
+    top: -15px;
+}
+
+/* Portfolio Section */
+.portfolio{
+    position: relative;
+}
+.portfolio .portfolio-heading{
+    width: 100%;
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.portfolio .title{
+    width: 70%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    padding: 1.2rem 1rem;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+.portfolio-gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    top: 22%;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 40px #ccc;
+}
+.portfolio-gallery .photo{
+    width: 24%;
+    box-shadow: 0 0 5px 2px #fff;
+    margin-bottom: 1rem;
+}
+.portfolio-gallery .photo:hover{
+    box-shadow: 0 5px 10px #fff;
+}
+.portfolio-gallery .photo img{
+    width: 100%;
+    height: 100%;
+}
+.photosession-types{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 115%;
+    left: 0;
+}
+.photosession-types .family{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    margin-bottom: 10vh;
+}
+.photosession-types .family img{
+    width: 50%;
+    box-shadow: 0 0 15px #909090;
+}
+
+.img-odd{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.img-even{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.photosession-types .family .txt{
+    width: 50%;
+    display: block;
+    text-align: center;
+    margin-top: 25vh;
+    font-family: 'Lato',sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.photosession-types .family .txt h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+}
+.photosession-types .family .txt .txt-content{
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+
+
 /* Media queries */
-@media (min-width: 768%) and (max-width: 1200px) {
+@media (min-width: 1200px) {
+    html{
+        font-size: 72%;
+    }
+    .content .line-2{
+        font-size: 7.5rem;
+    }
+    .home .content-box{
+        width: 450px;
+        font-size: 2rem;
+        padding: 1.5rem 7rem 1.5rem 1.5rem;
+    }
+    .home .box-1{
+        top: 2vh;
+        padding: 1.5rem 7rem 1.5rem 1.5rem;
+    }
+    .home .box-2{
+        text-align: right;
+        top: 34vh;
+        right: 15vw;
+        padding: 1.5rem 1.5rem 1.5rem 7rem;
+    }
+    .home .box-2 span {
+        left: -15px;
+    }
+    .home .box-3{
+        top: 85vh;
+        padding: 1.5rem 7rem 1.5rem 1.5rem;
+    }
+    .photosession-types{
+        top: 115%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.99px) {
     html{
         font-size: 68%;
     }
     .content .line-2{
         font-size: 7rem;
     }
+    .home .content-box{
+        width: 400px;
+        font-size: 2rem;
+        padding: 1.5rem 5rem 1.5rem 1.5rem;
+    }
+    .home .box-1{
+        top: 2vh;
+        padding: 1.5rem 5rem 1.5rem 1.5rem;
+    }
     .home .box-2{
         text-align: right;
-        right: 10%;
+        top: 31vh;
+        right: 10vw;
+        padding: 1.5rem 1.5rem 1.5rem 5rem;
+    }
+    .home .box-2 span {
+        left: -15px;
+    }
+    .home .box-3{
+        top: 83vh;
+        padding: 1.5rem 5rem 1.5rem 1.5rem;
+    }
+    .portfolio-gallery .photo{
+        width: 49%;
+        margin-bottom: 2rem;
+    }
+    .photosession-types{
+        top: 280vh;
+    }
+    .photosession-types .family .txt{
+        margin-top: 15vh;
+        font-size: 70%;
     }
 }
-@media (min-width: 441px) and (max-width: 768px) {
+@media (min-width: 441px) and (max-width: 767.99px) {
     html{
-        font-size: 56%;
+        font-size: 54%;
     }
     .content .line-2{
-        font-size: 6.5rem;
+        font-size: 6rem;
+    }
+    .home .content-box{
+        width: 60%;
+        font-size: 2rem;
+        padding: 1.5rem 2rem 1.5rem 1.5rem;
+    }
+    .home .box-1{
+        top: 1vh;
     }
     .home .box-2{
         text-align: right;
-        right: 10%;
+        top: 28vh;
+        right: 10vw;
+    }
+    .home .box-2 span {
+        left: -15px;
+    }
+    .home .box-3{
+        top: 72vh;
+    }
+    .portfolio-gallery .photo{
+        width: 99%;
+        margin-bottom: 2rem;
+    }
+    .photosession-types{
+        top: 610vh;
+    }
+    .photosession-types .family{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .family-odd{
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .family-even{
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .photosession-types .family img, .photosession-types .family .txt{
+        width: 100%;
+        margin: 2rem 0;
     }
 }
 @media (max-width: 441px) {
     html{
-        font-size: 42%;
+        font-size: 46%;
     }
     .content .line-2{
         font-size: 4rem;
     }
+    .home .content-box{
+        width: 85%;
+        font-size: 2.5rem;
+        padding: 1.5rem 2rem 1.5rem 1.5rem;
+    }
+    .home .box-1{
+        top: 2vh;
+    }
     .home .box-2{
         text-align: left;
-        padding: 1.5rem 4rem 1.5rem 1.5rem;
+        top: 30vh;
+        padding: 1.5rem 2rem 1.5rem 1.5rem;
     }
+    .home .box-3{
+        top: 72vh;
+    }
+    .home .box-2 span {
+        right: -15px;
+    }
+    .portfolio-gallery .photo{
+        width: 99%;
+        margin-bottom: 2rem;
+    }
+    .photosession-types{
+        top: 360vh;
+    }
+    .photosession-types .family{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .family-odd{
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+    .family-even{
+        flex-direction: column;
+        border-radius: 0;
+    }
+    .photosession-types .family img, .photosession-types .family .txt{
+        width: 100%;
+        margin: 2rem 0;
+    }
+    
 }
