@@ -46,8 +46,8 @@ body{
 }
 section{
     min-height: 100vh;
-    padding: 1rem 7%;
-    padding-top: 6rem;
+    padding: 1rem 0;
+    padding-top: 3rem;
 }
 .heading{
     color:#444;
@@ -133,6 +133,7 @@ header .navbar ul li a:hover{
     display: flex;
     justify-content: left;
     align-items: flex-start;
+    padding: 0 7%;
 }
 .home .content{
     height: 100%;
@@ -188,7 +189,6 @@ header .navbar ul li a:hover{
     height: 30px;
     border-radius: 50%;
     border: 1px solid var(--white);
-    /* background-color: #13151a; */
 }
 .home .content-box > span div{
     position: absolute;
@@ -225,14 +225,9 @@ header .navbar ul li a:hover{
     top: -15px;
 }
 
-/* Portfolio Section */
-.portfolio{
-    position: relative;
-}
+
 .portfolio .portfolio-heading{
     width: 100%;
-    position: absolute;
-    top: 2vh;
     left: 0;
     display: flex;
     justify-content: center;
@@ -252,9 +247,7 @@ header .navbar ul li a:hover{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    width: 90%;
-    position: absolute;
-    top: 22%;
+    width: 100%;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 0 40px #ccc;
@@ -274,9 +267,7 @@ header .navbar ul li a:hover{
 .photosession-types{
     display: block;
     width: 100%;
-    position: absolute;
-    top: 115%;
-    left: 0;
+    margin-top: 15vh;
 }
 .photosession-types .family{
     width: 100%;
@@ -321,6 +312,96 @@ header .navbar ul li a:hover{
     letter-spacing: 2px;
 }
 
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 8%;
+    flex-wrap: wrap;
+}
+.contacts-info{
+    width: 250px;
+}
+.contacts .contacts-info h1{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ffffff;
+}
+.contacts-info .icons{
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    padding: 4rem 2rem 4rem 0;
+}
+.icons a{
+    margin-right: 2rem;
+}
+.contacts-info .icons i, .contacts-info p{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.contacts-info p i{
+    margin-right: 1rem;
+}
+.contacts-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 5rem;
+    background-color: #000000;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px #909090;
+}
+.contacts-form h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.contacts-form input{
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    background-color: var(--colorGrey);
+}
+.contacts-form .btn{
+    background-color: #ffffff;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 600;
+    padding: 2rem 4rem;
+    box-shadow: 2px 3px 5px #ccc;
+}
+.contacts-form .btn:hover{
+    box-shadow: 2px 6px 10px #ccc;
+}
+footer{
+    background-color: #000000;
+    width: 100%;
+    padding: 4rem 5rem;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer p, .footer i{
+    color: white;
+    font-size: 2rem;
+}
+.footer .icons{
+    width: 18%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer p span{
+    color: orange;
+}
+
 
 
 /* Media queries */
@@ -353,8 +434,8 @@ header .navbar ul li a:hover{
         top: 85vh;
         padding: 1.5rem 7rem 1.5rem 1.5rem;
     }
-    .photosession-types{
-        top: 115%;
+    .contacts-form{
+        width: 50%;
     }
 }
 @media (min-width: 768px) and (max-width: 1199.99px) {
@@ -390,12 +471,12 @@ header .navbar ul li a:hover{
         width: 49%;
         margin-bottom: 2rem;
     }
-    .photosession-types{
-        top: 280vh;
-    }
     .photosession-types .family .txt{
         margin-top: 15vh;
         font-size: 70%;
+    }
+    .contacts-form{
+        width: 60%;
     }
 }
 @media (min-width: 441px) and (max-width: 767.99px) {
@@ -428,9 +509,6 @@ header .navbar ul li a:hover{
         width: 99%;
         margin-bottom: 2rem;
     }
-    .photosession-types{
-        top: 610vh;
-    }
     .photosession-types .family{
         display: flex;
         flex-wrap: wrap;
@@ -448,6 +526,10 @@ header .navbar ul li a:hover{
     .photosession-types .family img, .photosession-types .family .txt{
         width: 100%;
         margin: 2rem 0;
+    }
+    .contacts-form{
+        width: 95%;
+        margin: 10rem 0;
     }
 }
 @media (max-width: 441px) {
@@ -480,9 +562,6 @@ header .navbar ul li a:hover{
         width: 99%;
         margin-bottom: 2rem;
     }
-    .photosession-types{
-        top: 360vh;
-    }
     .photosession-types .family{
         display: flex;
         flex-wrap: wrap;
@@ -501,5 +580,8 @@ header .navbar ul li a:hover{
         width: 100%;
         margin: 2rem 0;
     }
-    
+    .contacts-form{
+        margin-top: 10rem 0;
+        width: 95%;
+    }
 }
